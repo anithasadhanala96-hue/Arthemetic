@@ -1,0 +1,6 @@
+def usernameage(name,age):
+     print("hello"+ name+'age')
+
+
+
+usernameage(anitha,26)
