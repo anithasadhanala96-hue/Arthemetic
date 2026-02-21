@@ -1,28 +1,21 @@
 
-import sys
-input1=sys.argv[1].upper()
-input2=sys.argv[2].upper()
-A='ROCK'
-B='PAPER'
-C='SCISSOR'
-if(input1==A and input2==B):
-   print("paper wins rock lost")
-elif(input1==A and input2==C):
-   print("rock wins & scissor lost")
-elif(input1==A and input2==A):
-    print("TIE")  
-elif(input1==B and input2==A):
-    print("paper wins rock lost")
-elif(input1==B and input2==C):
-    print("scissor wins & paper lost")
-elif(input1==B and input2==B):
-    print("TIE")  
-elif(input1==C and input2==A):
-    print("rock wins & scissor lost")  
-elif(input1==C and input2==B):
-    print("scissor wins & paper lost")
-elif(input1==C and input2==C):
-    print("TIE")  
+import random
+player=input("'R'for ROCK,'P'for paper,'S'for scissor:").upper()
+computer=random.choice(['R','P','S'])
+def playerwin():
+    return "you wIn"
+def computerwin():
+    return"computer win"
+
+if(player==computer and computer==player):
+    print('TIE,TRY AGAIN')
+elif(player=='P' and computer=='R' or player=='R' and computer=='S' or player=='S' and computer=='P'):
+   print(playerwin())
+elif(player=='R' and computer=='P' or player=='S' and computer=='R' or player=='P' and computer=='S'):
+   print(computerwin())
 else:
-    print("give proper input")    
+    print('please give proper input')   
+
+
+
 
